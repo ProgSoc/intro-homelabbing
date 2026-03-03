@@ -160,7 +160,45 @@ layout: section
 
 ---
 
-## Session Agenda (~40 min + break)
+## What Is Homelabbing?
+
+- Running your own services on hardware/VMs you control
+- Practical way to learn Linux, networking, security, and automation
+- Typical projects: dashboards, media stacks, backups, VPNs, monitoring
+- Goal today: deploy one real service on a VPS with a repeatable workflow
+
+<!--
+- Keep this high-level and beginner-friendly.
+- Emphasize "learn by building" over perfect architecture.
+- 1 minute.
+-->
+
+---
+
+## Homelab Starter Stack
+
+Common technologies:
+
+- Linux (usually Ubuntu LTS), SSH, Docker, Docker Compose
+- Reverse proxy + HTTPS (Caddy, Traefik, or Nginx)
+- DNS/domain basics and environment secrets (`.env`)
+- Monitoring and backups as you grow
+
+Good starter server:
+
+- 2 vCPU, 2-4 GB RAM, 40+ GB SSD
+- Public IPv4 + SSH access, Ubuntu 22.04/24.04 LTS
+- Start with one VPS; scale only after you hit limits
+
+<!--
+- Mention old laptops/Raspberry Pi are also valid homelab starting points.
+- For workshop simplicity, we use a single cloud VPS.
+- 2 minutes.
+-->
+
+---
+
+## Hands-on Agenda (~40 min + break)
 
 - Connect to the VPS and run first checks (5 min)
 - Install Docker with the convenience script and verify (8 min)
