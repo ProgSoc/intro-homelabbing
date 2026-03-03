@@ -160,12 +160,13 @@ layout: section
 
 ---
 
-## Session Goals
+## Session Agenda (~40 min + break)
 
-- Log into a Linux VPS over SSH
-- Install Docker Engine and Docker Compose
-- Learn core Compose syntax and commands
-- Deploy Homarr with one `compose.yaml`
+- Connect to the VPS and run first checks (5 min)
+- Install Docker with the convenience script and verify (8 min)
+- Learn Compose essentials and core commands (7 min)
+- Deploy Homarr from `compose.yaml` and validate (13 min)
+- Recap, Q&A, and next steps (7 min)
 
 <!--
 - Mention this is practical and students should run commands as you do.
@@ -272,7 +273,7 @@ lsb_release -a
 <!--
 - Confirm everyone is logged into the expected account.
 - If `lsb_release` is missing, run `cat /etc/os-release` instead.
-- 2-3 minutes.
+- 3 minutes.
 -->
 
 ---
@@ -302,26 +303,8 @@ rm get-docker.sh
 <!--
 - Run update first, then install script.
 - Mention convenience script is workshop-friendly and quick.
-- 5 minutes (allow slower VPSs).
--->
-
----
-
-## Post-install Setup
-
-Start Docker now and on boot:
-
-```bash
-sudo systemctl enable --now docker
-sudo systemctl status docker --no-pager
-```
-
-For this workshop, run Docker commands with `sudo`.
-
-<!--
-- Point out active/running in systemctl output.
-- If not running, check logs with `journalctl -u docker`.
-- 2 minutes.
+- Convenience script usually enables/starts Docker on Ubuntu.
+- 4 minutes (allow slower VPSs).
 -->
 
 ---
@@ -345,8 +328,9 @@ Expected output includes: `Hello from Docker!`
 
 <!--
 - This is the confidence checkpoint before moving on.
+- If Docker isn't running, use `sudo systemctl start docker` and retry.
 - If image pull fails, usually DNS/internet issue on the VPS.
-- 3 minutes.
+- 4 minutes.
 -->
 
 ---
@@ -559,7 +543,7 @@ After pizza, try one of the extra stacks in `examples/`.
 
 <!--
 - Encourage students to test whoami/it-tools/uptime-kuma/linkding.
-- 20-30 seconds.
+- 5 minutes (break; separate from the 40-minute core agenda).
 -->
 
 ---
@@ -585,5 +569,5 @@ import progsocLogo from './images/progsoc-white.png'
 <!--
 - Close with Q&A.
 - Point to repo examples for post-workshop practice.
-- 2 minutes.
+- 7 minutes.
 -->
