@@ -1,11 +1,10 @@
-# Welcome to [Slidev](https://github.com/slidevjs/slidev)!
+# Intro Homelabbing Slides
 
-To start the slide show:
+To run the slideshow locally:
 
-- `pnpm install`
-- `pnpm dev`
-- visit <http://localhost:3030>
+- `bun install`
+- `bunx slidev --open`
 
-Edit the [slides.md](./slides.md) to see the changes.
+To build static output:
 
-Learn more about Slidev at the [documentation](https://sli.dev/).
+- `bun run build`
