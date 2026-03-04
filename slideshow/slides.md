@@ -148,17 +148,6 @@ Scan to open the live workshop slides:
 -->
 
 ---
-layout: section
----
-
-# What We Will Build
-
-<!--
-- Transition slide for the workshop roadmap.
-- 10 seconds.
--->
-
----
 
 ## What Is Homelabbing?
 
@@ -273,13 +262,13 @@ layout: section
 
 ---
 
-## Hands-on Agenda (~40 min + break)
+## Agenda
 
-- Connect to the VPS and run first checks (5 min)
-- Install Docker with the convenience script and verify (8 min)
-- Learn Compose essentials and core commands (7 min)
-- Deploy Homarr from `compose.yaml` and validate (13 min)
-- Recap, Q&A, and next steps (7 min)
+- Connect to the VPS and run first checks
+- Install Docker with the convenience script and verify
+- Learn Compose essentials and core commands
+- Deploy Homarr from `compose.yaml` and validate
+- Recap, Q&A, and next steps
 
 <!--
 - Mention this is practical and students should run commands as you do.
@@ -297,40 +286,6 @@ layout: section
 <!--
 - Ask everyone to confirm they can see their handout details.
 - If anyone is missing details, pause early.
-- 1 minute.
--->
-
----
-
-<script setup>
-import repoQr from './images/github-repo-qr.png'
-</script>
-
-## Get the Workshop Files
-
-You can run this right after you log in to your VPS.
-
-Option A (recommended): clone with Git
-
-```bash
-git clone https://github.com/ProgSoc/intro-homelabbing.git
-cd intro-homelabbing
-```
-
-Option B: in GitHub, click `Code` -> `Download ZIP`, then extract it.
-
-<div style="margin-top:6px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;">
-  <div>
-    <p style="margin:0 0 6px;">Repo URL:</p>
-    <p style="margin:0;"><code>https://github.com/ProgSoc/intro-homelabbing</code></p>
-  </div>
-  <img :src="repoQr" alt="QR code for intro-homelabbing repository" style="height:136px;width:136px;border-radius:12px;background:#fff;padding:8px;" />
-</div>
-
-<!--
-- Mention Git option is easiest for future updates (`git pull`).
-- If `git` is missing on VPS: `sudo apt install -y git`.
-- If someone used ZIP, that is completely fine for this workshop.
 - 1 minute.
 -->
 
@@ -389,6 +344,42 @@ lsb_release -a
 - Confirm everyone is logged into the expected account.
 - If `lsb_release` is missing, run `cat /etc/os-release` instead.
 - 3 minutes.
+-->
+
+---
+
+<script setup>
+import repoQr from './images/github-repo-qr.png'
+</script>
+
+## Get the Workshop Files
+
+Now that you're logged in, run:
+
+```bash
+sudo apt update
+sudo apt install -y git
+```
+
+Then clone the workshop repo:
+
+```bash
+git clone https://github.com/ProgSoc/intro-homelabbing.git
+cd intro-homelabbing
+```
+
+<div style="margin-top:6px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center;">
+  <div>
+    <p style="margin:0 0 6px;">Repo URL:</p>
+    <p style="margin:0;"><code>https://github.com/ProgSoc/intro-homelabbing</code></p>
+  </div>
+  <img :src="repoQr" alt="QR code for intro-homelabbing repository" style="height:136px;width:136px;border-radius:12px;background:#fff;padding:8px;" />
+</div>
+
+<!--
+- Install Git first (Debian image may not include it).
+- Clone once, then use `git pull` for updates during the workshop.
+- 1 minute.
 -->
 
 ---
